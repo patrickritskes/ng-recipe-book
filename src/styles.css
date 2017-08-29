@@ -1,5 +1,9 @@
 body {    
     font-family: 'Covered By Your Grace', cursive;
+    background-color:white;
+    background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
+    linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
+    background-size:50px 50px;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Shadows Into Light', cursive;

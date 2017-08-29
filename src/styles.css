@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+body {    
+    font-family: 'Covered By Your Grace', cursive;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Shadows Into Light', cursive;
+}

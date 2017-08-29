@@ -1,0 +1,12 @@
+#navbar-primary .navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+#navbar-primary .navbar-nav > li {
+    display: inline-block;
+    float: none;
+}
+#navbar-primary .navbar-nav > li > a {
+    padding-left: 30px;
+    padding-right: 30px;
+}

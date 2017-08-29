@@ -1,2 +1,2 @@
 # ng-recipe-book
-Recipe Book + shopping list in Angular 4
+A complete Recipe Book and shopping list created in Angular 4

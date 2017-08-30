@@ -41,13 +41,42 @@ h6 {
 }
 
 .recipe-book-bg {
-    background-color: #fff;
+    background: white;
     background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
-    background-size: 100% 2.6em;
+    background-size: 100% 2.0em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 26px auto 0;    
+    position: relative;
     height: 100vh;
     padding: 20px;
     padding-left: 100px;
-    -webkit-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-book-bg:before,
+.recipe-book-bg:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.recipe-book-bg:before {
+    background: #fafafa;
+    background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 2.0em;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+
+.recipe-book-bg:after {
+    background: #f6f6f6;
+    background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 2.0em;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
 }

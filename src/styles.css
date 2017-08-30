@@ -2,14 +2,52 @@ body {
     font-family: 'Shadows Into Light', cursive;
     background-color: white;
     background-image: linear-gradient(90deg, rgba(200, 0, 0, .5) 50%, transparent 50%), linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 50%);
-    background-size: 50px 50px;
+    background-size: 102px 102px;
     font-size: 20px;
     height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Covered By Your Grace', cursive;
+    font-weight: bold;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.btn-recipe-book {
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    transition: .5s;
+    border: 2px solid transparent;
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-recipe-book:hover {
+    transition: .5s;
+    background-color: white;
+    color: #ff9800;
+    border: 2px solid #ff9800;
+}
+
 .recipe-book-bg {
     background-color: #fff;
-    background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .1em, transparent .1em);
-    background-size: 100% 1.2em;
+    background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 2.6em;
     height: 100vh;
+    padding: 20px;
+    padding-left: 100px;
+    -webkit-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.2);
 }

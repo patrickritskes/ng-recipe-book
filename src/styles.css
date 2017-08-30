@@ -22,7 +22,7 @@ h6 {
 }
 
 .btn-recipe-book {
-    background-color: #ff9800;
+    background-color: black;
     color: white;
     font-weight: bold;
     font-size: 12px;
@@ -36,8 +36,28 @@ h6 {
 .btn-recipe-book:hover {
     transition: .5s;
     background-color: white;
-    color: #ff9800;
-    border: 2px solid #ff9800;
+    color: black;
+    border: 2px solid black;
+}
+
+.btn-recipe-book-danger {
+    background-color: #aa1d1d;
+}
+
+.btn-recipe-book-danger:hover {
+    background-color: white;
+    color: #aa1d1d;
+    border: 2px solid #aa1d1d;
+}
+
+.btn-recipe-book-primary {
+    background-color: #3434cf;
+}
+
+.btn-recipe-book-primary:hover {
+    background-color: white;
+    color: #3434cf;
+    border: 2px solid #3434cf;
 }
 
 .recipe-book-bg {

@@ -1,12 +1,16 @@
 #navbar-primary .navbar-nav {
+    font-family: 'Covered By Your Grace', cursive;
     width: 100%;
     text-align: center;
 }
-#navbar-primary .navbar-nav > li {
+
+#navbar-primary .navbar-nav>li {
     display: inline-block;
     float: none;
 }
-#navbar-primary .navbar-nav > li > a {
+
+#navbar-primary .navbar-nav>li>a {
     padding-left: 30px;
     padding-right: 30px;
+    font-size: 25px;
 }

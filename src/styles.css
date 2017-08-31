@@ -17,46 +17,70 @@ h6 {
     font-weight: bold;
 }
 
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
 .margin-top-20 {
     margin-top: 20px;
 }
 
+.recipe-box-shadow {
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
 .btn-recipe-book {
-    background-color: black;
+    background: #3a3a3c;
+    background: -moz-linear-gradient(top, #3a3a3c 0%, #3a3a3c 35%, #000000 100%);
+    background: -webkit-linear-gradient(top, #3a3a3c 0%, #3a3a3c 35%, #000000 100%);
+    background: linear-gradient(to bottom, #3a3a3c 0%, #3a3a3c 35%, #000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3a3c', endColorstr='#000000', GradientType=0);
     color: white;
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
     transition: .5s;
     border: 2px solid transparent;
-    -webkit-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-recipe-book:hover {
     transition: .5s;
-    background-color: white;
+    background: white;
     color: black;
     border: 2px solid black;
 }
 
 .btn-recipe-book-danger {
-    background-color: #aa1d1d;
+    transition: .5s;
+    color: white;
+    background: #a86363;
+    background: -moz-linear-gradient(top, #a86363 0%, #a86363 35%, #aa1d1d 100%);
+    background: -webkit-linear-gradient(top, #a86363 0%, #a86363 35%, #aa1d1d 100%);
+    background: linear-gradient(to bottom, #a86363 0%, #a86363 35%, #aa1d1d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a86363', endColorstr='#aa1d1d', GradientType=0);
 }
 
 .btn-recipe-book-danger:hover {
-    background-color: white;
+    transition: .5s;
     color: #aa1d1d;
+    background: white;
     border: 2px solid #aa1d1d;
 }
 
 .btn-recipe-book-primary {
-    background-color: #3434cf;
+    transition: .5s;
+    background: #6d6dce;
+    background: -moz-linear-gradient(top, #6d6dce 0%, #6d6dce 35%, #3434cf 100%);
+    background: -webkit-linear-gradient(top, #6d6dce 0%, #6d6dce 35%, #3434cf 100%);
+    background: linear-gradient(to bottom, #6d6dce 0%, #6d6dce 35%, #3434cf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6dce', endColorstr='#3434cf', GradientType=0);
 }
 
 .btn-recipe-book-primary:hover {
-    background-color: white;
+    transition: .5s;
+    background: white;
     color: #3434cf;
     border: 2px solid #3434cf;
 }
@@ -66,7 +90,7 @@ h6 {
     background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
     background-size: 100% 2.0em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin: 26px auto 0;    
+    margin: 26px auto 0;
     position: relative;
     height: 100vh;
     padding: 20px;

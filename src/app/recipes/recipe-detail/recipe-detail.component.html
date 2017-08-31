@@ -1,20 +1,18 @@
 <div class="row">
   <div class="col-xs-12">
-    <img width="150" height="150" src="assets/img/recipe-book-logo.png" alt="" class="img-responsive">
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="recipe-detail-image center-block img-responsive img-thumbnail">
   </div>
 </div>
 
 <div class="row">
-  <div class="col-xs-12">
-    <h1>Recipe Name</h1>
+  <div class="col-xs-4">
+    <h1>{{ recipe.name }}</h1>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-12">
-    <button type="button" class="btn btn-recipe-book dropdown-toggle recipe-box-shadow">
-      Manage Recipe
-      <span class="caret"></span>
+  <div class="col-xs-8">
+    <span class="pull-right">
+    <button type="button" class="btn btn-recipe-book dropdown-toggle recipe-box-shadow margin-top-20">
+        Manage Recipe
+        <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
       <li>
@@ -27,12 +25,13 @@
         <a href="#">Delete Recipe</a>
       </li>
     </ul>
+    </span>
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
-    <p>Description</p>
+    <p>{{ recipe.description }}</p>
   </div>
 </div>
 

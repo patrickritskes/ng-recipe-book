@@ -26,3 +26,22 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Git tips and trics
+
+Local changes in wrong branch (checkout -> choose other branch in Visual Studio Code with left bottom menu):
+
+```
+git stash
+git checkout otherBranch 
+git stash pop
+```
+Remove all local refs that are merged except develop (powershell):
+```
+git branch --merged | ?{-not ($_ -like '*develop')} | %{git branch -d $_.trim()}
+```
+
+Remove all refs to remote branches (prefixe with origin) that don't exists anymore (You have to sync changes or restart VSC to see this directly or maybe wait sometime):
+```
+git fetch --prune
+```

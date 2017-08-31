@@ -52,6 +52,13 @@ h6 {
     border: 2px solid black;
 }
 
+.btn-recipe-book:focus {
+    transition: .5s;
+    background: white;
+    color: black;
+    border: 2px solid black;
+}
+
 .btn-recipe-book-danger {
     transition: .5s;
     color: white;
@@ -69,6 +76,13 @@ h6 {
     border: 2px solid #aa1d1d;
 }
 
+.btn-recipe-book-danger:focus {
+    transition: .5s;
+    color: #aa1d1d;
+    background: white;
+    border: 2px solid #aa1d1d;
+}
+
 .btn-recipe-book-primary {
     transition: .5s;
     background: #6d6dce;
@@ -79,6 +93,13 @@ h6 {
 }
 
 .btn-recipe-book-primary:hover {
+    transition: .5s;
+    background: white;
+    color: #3434cf;
+    border: 2px solid #3434cf;
+}
+
+.btn-recipe-book-primary:focus {
     transition: .5s;
     background: white;
     color: #3434cf;

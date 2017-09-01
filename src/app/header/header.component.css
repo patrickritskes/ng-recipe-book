@@ -13,4 +13,9 @@
     padding-left: 30px;
     padding-right: 30px;
     font-size: 25px;
+    border: 1px solid transparent;
+}
+
+#navbar-primary .navbar-nav>li.active {
+    border: 1px solid #9d9d9d;
 }

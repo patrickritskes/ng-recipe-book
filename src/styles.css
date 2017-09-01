@@ -16,6 +16,9 @@ h6 {
     font-family: 'Covered By Your Grace', cursive;
     font-weight: bold;
 }
+a:hover {
+    cursor: pointer;
+}
 
 .margin-bottom-20 {
     margin-bottom: 20px;

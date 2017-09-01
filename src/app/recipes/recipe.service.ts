@@ -1,6 +1,10 @@
+import { EventEmitter } from '@angular/core';
+
 import { Recipe } from './recipe.model';
 
 export class RecipeService {
+recipeSelected = new EventEmitter<Recipe>();
+
     private recipes: Recipe[] = [
         new Recipe('Spaghetti', 'Spaghetti Napolitana', 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Spaghetti_al_Pomodoro.JPG'),
         new Recipe('Tortellini', 'Tortellini with Spinach', 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tortellini.jpg'),

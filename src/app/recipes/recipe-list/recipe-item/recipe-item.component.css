@@ -1,0 +1,6 @@
+.list-group-item {
+    font-size: 23px;
+}
+.list-group-item.active {
+    background-color: black;
+}

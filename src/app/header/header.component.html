@@ -12,11 +12,11 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-primary-collapse">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#" (click)="onSelect('recipe')">Recipes</a>
+                    <li routerLinkActive="active">
+                        <a routerLink="/recipes">Recipes</a>
                     </li>
-                    <li>
-                        <a href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+                    <li routerLinkActive="active">
+                        <a routerLink="/shopping-list">Shopping List</a>
                     </li>
                     <li>
                         <a href="#">
@@ -24,17 +24,17 @@
                         </a>
                     </li>
                     <li class="dropdown" appDropDown>
-                        <a href="#" role="button">Manage <span class="caret"></span></a>
+                        <a role="button">Manage <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#"><span class="glyphicon glyphicon-save"></span> Save Data</a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-retweet"></span> Fetch Data</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                        <a><span class="glyphicon glyphicon-user"></span> Sign Up</a>
                     </li>
                     <li>
-                        <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        <a><span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                 </ul>
             </div>

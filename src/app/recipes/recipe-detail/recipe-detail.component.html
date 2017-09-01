@@ -9,20 +9,20 @@
     <h1>{{ recipe.name }}</h1>
   </div>
   <div class="col-xs-8">
-    <span class="pull-right">
-    <button type="button" class="btn btn-recipe-book dropdown-toggle recipe-box-shadow margin-top-20">
+    <span class="pull-right dropdown" appDropDown>
+    <button type="button" class="btn btn-recipe-book recipe-box-shadow margin-top-20">
         Manage Recipe
         <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
       <li>
-        <a href="#">To Shopping List</a>
+        <a href="#"><span class="glyphicon glyphicon-plus"></span> To Shopping List</a>
       </li>
       <li>
-        <a href="#">Edit Recipe</a>
+        <a href="#"><span class="glyphicon glyphicon-pencil"></span> Edit Recipe</a>
       </li>
       <li>
-        <a href="#">Delete Recipe</a>
+        <a href="#"><span class="glyphicon glyphicon-trash"></span> Delete Recipe</a>
       </li>
     </ul>
     </span>

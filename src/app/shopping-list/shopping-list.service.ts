@@ -6,8 +6,8 @@ export class ShoppingListService {
 ingredientChanged = new EventEmitter<Ingredient[]>();
 
     private ingredients: Ingredient[] = [
-        new Ingredient('apples', 5),
-        new Ingredient('tomatoes', 10)
+        new Ingredient(5, 'pieces', 'apples'),
+        new Ingredient(10, 'pieces', 'tomatoes')
     ];
 
     getIngredients() {

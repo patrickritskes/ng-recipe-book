@@ -1,9 +1,11 @@
 export class Ingredient {
-    name: string;
+    prefix: string;
     amount: number;
+    name: string;    
 
-    constructor(name: string, amount: number) {
-        this.name = name;
+    constructor(amount: number, prefix: string, name: string) {
+        this.prefix = prefix;
         this.amount = amount;
+        this.name = name;        
     }
 }

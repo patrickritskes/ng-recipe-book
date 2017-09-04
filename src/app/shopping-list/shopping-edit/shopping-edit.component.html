@@ -3,24 +3,18 @@
 
     <div class="col-sm-2 form-group">
       <label for="amount">Amount</label>
-      <input type="number" id="amount" class="form-control" name="amount" placeholder="Amount" required ngModel pattern="^[1-9]+[0-9]*$" min="0" #amountInput="ngModel">
+      <input type="number" id="amount" class="form-control" name="amount" placeholder="Amount..." required ngModel pattern="^[1-9]+[0-9]*$"
+        min="0" #amountInput="ngModel">
       <span class="help-block" *ngIf="!amountInput.valid && amountInput.touched">Please enter an valid amount!</span>
     </div>
     <div class="col-sm-4 form-group">
       <label for="prefix">Weight, Measure or Pieces?</label>
-      <select id="prefix" class="form-control" name="prefix" required ngModel #selectPrefix="ngModel">
-        <option value="" disabled selected>Select something...</option>
-        <option value="Piece(s)">Piece(s)</option>
-        <option value="Milliliter(s)">Milliliter(s)</option>
-        <option value="Liter(s)">Liter(s)</option>
-        <option value="Gram(s)">Gram(s)</option>
-        <option value="Kilo(s)">Kilo(s)</option>
-      </select>
-      <span class="help-block" *ngIf="!selectPrefix.valid && selectPrefix.touched">Please select one!</span>
+      <input type="text" id="prefix" class="form-control" name="prefix" placeholder="e.q: KG, Liters..." required ngModel #selectPrefix="ngModel">
+      <span class="help-block" *ngIf="!selectPrefix.valid && selectPrefix.touched">Please enter a prefix!</span>
     </div>
     <div class="col-sm-6 form-group">
       <label for="name">Ingredient Name</label>
-      <input type="text" id="name" class="form-control" name="name" placeholder="Ingredient Name" required ngModel #ingredientName="ngModel">
+      <input type="text" id="name" class="form-control" name="name" placeholder="Name for the ingredient..." required ngModel #ingredientName="ngModel">
       <span class="help-block" *ngIf="!ingredientName.valid && ingredientName.touched">Please enter a ingredient!</span>
     </div>
 

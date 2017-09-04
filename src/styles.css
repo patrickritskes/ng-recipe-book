@@ -36,7 +36,7 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin: 26px auto 0;
     position: relative;
-    height: 100vh;
+    /*height: 100%;*/
     padding: 30px 40px 20px 100px;
 }
 
@@ -169,4 +169,38 @@ a:hover {
     border-bottom: 7px solid white;
     border-left: 7px solid transparent;
     content: '';
+}
+
+select:required:invalid {
+    color: gray;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: black;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+label {
+    font-size: 1.3em;
+    line-height: 1em;
+    font-weight: normal;
+}
+
+.form-control {
+    font-size: 1em;
+    color: #080808;
+    height: 40px;
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
 }

@@ -1,3 +1,72 @@
-<p>
-  recipe-edit works!
-</p>
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="btn-group margin-bottom-20 recipe-box-shadow">
+        <button class="btn btn-recipe-book" type="submit" [disabled]="!recipeForm.valid"><span class="glyphicon glyphicon-save"></span> Save</button>
+        <button class="btn btn-recipe-book btn-recipe-book-primary" type="button"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="imagePath">Image URL</label>
+        <input type="text" id="imagePath" class="form-control" formControlName="imagePath">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <img src="" class="img-responsive">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="name">Description</label>
+        <textarea type="text" id="description" rows="6" class="form-control" formControlName="description">
+            </textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" formArrayName="ingredients">
+      <div class="row" *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index" [formGroupName]="i">
+        <div class="col-xs-2">
+          <div class="form-group">
+            <input type="number" class="form-control" formControlName="amount">
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="prefix">
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="name">
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <button class="btn btn-recipe-book btn-recipe-book-danger" type="button"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-recipe-book recipe-box-shadow" (click)="onAddIngredient()">
+        <span class="glyphicon glyphicon-plus"></span> 
+        Add Ingredient
+      </button>
+    </div>
+  </div>
+</form>

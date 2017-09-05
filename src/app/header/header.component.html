@@ -27,17 +27,20 @@
                         <a role="button">Manage <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a (click)="onSaveData()"><span class="glyphicon glyphicon-save"></span> Save Data</a></li>
-                            <li><a (click)="onFetchData()"><span class="glyphicon glyphicon-retweet"></span> Fetch Data</a></li>
+                            <li><a (click)="onFetchData()"><span class="glyphicon glyphicon-refresh"></span> Fetch Data</a></li>
                         </ul>
                     </li>
                     <ng-template [ngIf]="!authService.isAuthenticated()">
-                        <li>
+                        <li routerLinkActive="active">
                             <a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Register</a>
                         </li>
-                        <li>
+                        <li routerLinkActive="active">
                             <a routerLink="/signin"><span class="glyphicon glyphicon-log-in"></span> Login</a>
                         </li>
                     </ng-template>
+                    <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
+                        <a (click)="onLogout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

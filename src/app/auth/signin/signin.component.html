@@ -1,3 +1,17 @@
-<p>
-  signin works!
-</p>
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offest-2">
+    <form (ngSubmit)="onSignIn(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" ngModel class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" minlength="6" ngModel class="form-control">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-recipe-book" type="submit" [disabled]="!f.valid">Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>

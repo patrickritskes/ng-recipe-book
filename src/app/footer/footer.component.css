@@ -1,0 +1,38 @@
+.copyright {
+    min-height: 40px;
+    background-color: #000000;
+}
+
+.copyright p {
+    text-align: left;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 0px;
+}
+
+.recipe-book-footer-list {
+    list-style-type: none;
+    float: right;
+    margin-bottom: 0px;
+}
+
+.recipe-book-footer-list li {
+    float: left;
+    line-height: 40px;
+}
+
+.recipe-book-footer-list li:after {
+    content: "/";
+    color: white;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.recipe-book-footer-list li:last-child:after {
+    content: none;
+}
+
+.recipe-book-footer-list li a {
+    color: white;
+    font-size: 18px;
+}

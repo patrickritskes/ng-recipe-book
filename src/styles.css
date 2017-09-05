@@ -36,8 +36,36 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin: 26px auto 0;
     position: relative;
-    /*height: 100%;*/
     padding: 30px 40px 20px 100px;
+}
+
+.recipe-book-bg:before,
+.recipe-book-bg:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.recipe-book-bg:before {
+    background: #fafafa;
+    background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 2.0em;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+
+.recipe-book-bg:after {
+    background: #f6f6f6;
+    background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 2.0em;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
 }
 
 .recipe-box-shadow {
@@ -119,35 +147,6 @@ a:hover {
     background: white;
     color: #3434cf;
     border: 2px solid #3434cf;
-}
-
-.recipe-book-bg:before,
-.recipe-book-bg:after {
-    content: "";
-    height: 98%;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-}
-
-.recipe-book-bg:before {
-    background: #fafafa;
-    background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
-    background-size: 100% 2.0em;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    left: -5px;
-    top: 4px;
-    transform: rotate(-2.5deg);
-}
-
-.recipe-book-bg:after {
-    background: #f6f6f6;
-    background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
-    background-size: 100% 2.0em;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    right: -3px;
-    top: 1px;
-    transform: rotate(1.4deg);
 }
 
 .recipe-detail-image {

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
+import { Observable } from 'rxjs/Rx';
+
 import { RecipeService } from '../recipes/recipe.service';
 import { Recipe } from '../recipes/recipe.model';
 
@@ -15,9 +17,19 @@ export class DataStorageService {
 
     getRecipes() {
         this.http.get('https://recipe-book-3b650.firebaseio.com/recipes.json')
-            .subscribe(
+            .map(
             (response: Response) => {
                 const recipes: Recipe[] = response.json();
+                for (let recipe of recipes) {
+                    if (!recipe['ingredient']) {
+                        recipe['ingredient'] = [];
+                    }
+                }
+                return recipes;
+            }
+            )
+            .subscribe(
+            (recipes: Recipe[]) => {
                 this.recipeService.setRecipes(recipes);
                 }
             )

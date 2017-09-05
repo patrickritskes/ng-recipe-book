@@ -24,6 +24,7 @@ import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    RecipesModule
+    RecipesModule,
+    SharedModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]

@@ -56,7 +56,9 @@
           </div>
         </div>
         <div class="col-xs-2">
-          <button class="btn btn-recipe-book btn-recipe-book-danger" type="button"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+          <div class="form-group">
+            <button type="button" class="btn btn-recipe-book btn-recipe-book-danger" (click)="onDeleteIngredient(i)"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+          </div>
         </div>
       </div>
     </div>

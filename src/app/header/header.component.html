@@ -23,19 +23,21 @@
                             <img id="logo-navbar-middle" width="125" height="125" src="assets/img/recipe-book-logo.png" alt="Recipe Book logo">
                         </a>
                     </li>
-                    <li class="dropdown" appDropDown>
+                    <li class="dropdown" appDropDown *ngIf="authService.isAuthenticated()">
                         <a role="button">Manage <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a (click)="onSaveData()"><span class="glyphicon glyphicon-save"></span> Save Data</a></li>
                             <li><a (click)="onFetchData()"><span class="glyphicon glyphicon-retweet"></span> Fetch Data</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Register</a>
-                    </li>
-                    <li>
-                        <a routerLink="/signin"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-                    </li>
+                    <ng-template [ngIf]="!authService.isAuthenticated()">
+                        <li>
+                            <a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Register</a>
+                        </li>
+                        <li>
+                            <a routerLink="/signin"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        </li>
+                    </ng-template>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

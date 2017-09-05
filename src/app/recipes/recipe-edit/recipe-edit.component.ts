@@ -14,7 +14,7 @@ export class RecipeEditComponent implements OnInit {
   editMode = false;
   recipeForm: FormGroup;
 
-  constructor(private route: ActivatedRoute, private RecipeService: RecipeService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private recipeService: RecipeService, private router: Router) { }
 
   ngOnInit() {
     this.route.params
@@ -28,16 +28,10 @@ export class RecipeEditComponent implements OnInit {
   }
 
   onSubmit() {
-    //const newRecipe = new Recipe(
-    //  this.recipeForm.value['name'],
-    //  this.recipeForm.value['description'],
-    //  this.recipeForm.value['imagePath'],
-    //  this.recipeForm.value['ingredients']
-    //);
     if (this.editMode) {
-      this.RecipeService.updateRecipe(this.id, this.recipeForm.value /*newRecipe*/);
+      this.recipeService.updateRecipe(this.id, this.recipeForm.value);
     } else {
-      this.RecipeService.addRecipe(this.recipeForm.value /*newRecipe*/);
+      this.recipeService.addRecipe(this.recipeForm.value);
     }
     this.onCancel();
   }
@@ -63,7 +57,7 @@ export class RecipeEditComponent implements OnInit {
     let recipeIngredients = new FormArray([]);
 
     if (this.editMode) {
-      const recipe = this.RecipeService.getRecipe(this.id);
+      const recipe = this.recipeService.getRecipe(this.id);
       recipeName = recipe.name;
       recipeImagePath = recipe.imagePath;
       recipeDescription = recipe.description;

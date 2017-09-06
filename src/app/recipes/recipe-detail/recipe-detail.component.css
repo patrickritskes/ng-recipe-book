@@ -1,0 +1,7 @@
+.recipe-detail-image {
+    max-height: 285px;
+    transform: rotate(-2deg);
+}
+.recipe-detail {
+    margin-bottom: 15px;
+}

@@ -1,10 +1,14 @@
 body {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Covered By Your Grace', cursive;
     background-color: white;
     background-image: linear-gradient(90deg, rgba(200, 0, 0, .5) 50%, transparent 50%), linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 50%);
     background-size: 102px 102px;
     font-size: 20px;
     height: 100%;
+}
+
+p {
+    margin-top: 15px;
 }
 
 h1,
@@ -13,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Covered By Your Grace', cursive;
+    font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
 }
 
@@ -25,6 +29,10 @@ a:hover {
     margin-bottom: 20px;
 }
 
+.margin-top-10 {
+    margin-top: 10px;
+}
+
 .margin-top-20 {
     margin-top: 20px;
 }
@@ -32,16 +40,16 @@ a:hover {
 .recipe-book-bg {
     background: white;
     background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
-    background-size: 100% 2.0em;
+    background-size: 100% 1.3em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin: 26px auto 0;
     position: relative;
-    padding: 30px 40px 20px 100px;
+    padding: 0 40px 30px 100px;
     min-height: 550px;
 }
 
-.recipe-book-bg:before,
-.recipe-book-bg:after {
+.recipe-book-bg-top:before,
+.recipe-book-bg-top:after {
     content: "";
     height: 98%;
     position: absolute;
@@ -49,20 +57,49 @@ a:hover {
     z-index: -1;
 }
 
-.recipe-book-bg:before {
+.recipe-book-bg-top:before {
     background: #fafafa;
     background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
-    background-size: 100% 2.0em;
+    background-size: 100% 1.3em;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     left: -5px;
     top: 4px;
     transform: rotate(-2.5deg);
 }
 
-.recipe-book-bg:after {
+.recipe-book-bg-top:after {
     background: #f6f6f6;
     background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
-    background-size: 100% 2.0em;
+    background-size: 100% 1.3em;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+}
+
+.recipe-book-bg-bottom:before,
+.recipe-book-bg-bottom:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.recipe-book-bg-bottom:before {
+    background: #fafafa;
+    background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.3em;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+
+.recipe-book-bg-bottom:after {
+    background: #f6f6f6;
+    background-image: linear-gradient(90deg, transparent 80px, #abced4 90px, #abced4 90px, transparent 90px), linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.3em;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     right: -3px;
     top: 1px;
@@ -150,11 +187,6 @@ a:hover {
     border: 2px solid #3434cf;
 }
 
-.recipe-detail-image {
-    max-height: 300px;
-    transform: rotate(-2deg);
-}
-
 .dropdown-menu {
     text-transform: uppercase;
     font-size: 20px;
@@ -184,7 +216,11 @@ option {
 }
 
 .form-group {
-    margin-top: 10px;
+    margin-top: 15px;
+}
+
+.list-group-item {
+    padding: 12px 15px;
 }
 
 label {
@@ -196,7 +232,7 @@ label {
 .form-control {
     font-size: 1em;
     color: #080808;
-    height: 40px;
+    height: 42px;
 }
 
 input.ng-invalid.ng-touched,

@@ -1,6 +1,7 @@
 .copyright {
     min-height: 40px;
     background-color: #000000;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 .copyright p {
@@ -18,7 +19,7 @@
 
 .recipe-book-footer-list li {
     float: left;
-    line-height: 40px;
+    line-height: 70px;
 }
 
 .recipe-book-footer-list li:after {

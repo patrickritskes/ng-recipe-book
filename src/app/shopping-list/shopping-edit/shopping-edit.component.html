@@ -1,4 +1,4 @@
-<div class="row shopping-list-form-bg">
+<div class="row">
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
 
     <div class="col-sm-2 form-group">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="col-xs-12">
-      <div class="btn-group margin-bottom-20 recipe-box-shadow">
+      <div class="btn-group shopping-list-btn-toolbar margin-bottom-20 recipe-box-shadow">
         <button class="btn btn-recipe-book" type="submit" [disabled]="!f.valid"><span class="glyphicon glyphicon-plus" [ngClass]="{'glyphicon-repeat': editMode}"></span> {{ editMode ? 'Update' : 'Add' }}</button>
         <button class="btn btn-recipe-book btn-recipe-book-danger" type="button" (click)="onDelete()" *ngIf="editMode"><span class="glyphicon glyphicon-trash"></span> Delete</button>
         <button class="btn btn-recipe-book btn-recipe-book-primary" type="button" (click)="onClear()"><span class="glyphicon glyphicon-remove"></span> Cancel</button>

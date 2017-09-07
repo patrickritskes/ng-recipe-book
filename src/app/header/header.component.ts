@@ -10,8 +10,9 @@ import { AuthService } from '../auth/auth.service';
     styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+    isMobileNavbarToggled = false;
 
-    constructor(private dataStorageService: DataStorageService, private authService: AuthService) {}
+    constructor(private dataStorageService: DataStorageService, public authService: AuthService) {}
 
     onSaveData() {
         this.dataStorageService.storeRecipes()
@@ -28,5 +29,9 @@ export class HeaderComponent {
 
     onLogout() {
         this.authService.logoutUser();
+    }
+
+    toggleMobileNavbar() {
+        this.isMobileNavbarToggled = !this.isMobileNavbarToggled;
     }
 }

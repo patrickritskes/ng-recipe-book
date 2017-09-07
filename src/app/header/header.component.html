@@ -1,28 +1,22 @@
-<header role="banner">
-    <nav id="navbar-primary" class="navbar navbar-inverse recipe-box-shadow" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+<header>
+    <nav class="navbar navbar-inverse navbar-static-top recipe-box-shadow" role="navigation">
+        <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle" [ngClass]="{'collapsed': isMobileNavbarToggled}" data-toggle="collapse" (click)="toggleMobileNavbar()">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand" routerLink="/">
+                    <img class="img-responsive img-circle recipe-box-shadow" width="100" height="100" src="assets/img/recipe-book-logo.png" alt="Recipe Book logo">
+                </a>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-primary-collapse">
-                <ul class="nav navbar-nav">
-                    <li routerLinkActive="active">
-                        <a routerLink="/recipes">Recipes</a>
-                    </li>
-                    <li routerLinkActive="active">
-                        <a routerLink="/shopping-list">Shopping List</a>
-                    </li>
-                    <li>
-                        <a routerLink="/">
-                            <img id="logo-navbar-middle" width="125" height="125" src="assets/img/recipe-book-logo.png" alt="Recipe Book logo">
-                        </a>
-                    </li>
+            <div class="navbar-collapse collapse" [ngClass]="{'in': isMobileNavbarToggled}">
+                <ul class="nav navbar-nav navbar-left">
+                    <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+                    <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown" appDropDown *ngIf="authService.isAuthenticated()">
                         <a role="button">Manage <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -31,21 +25,12 @@
                         </ul>
                     </li>
                     <ng-template [ngIf]="!authService.isAuthenticated()">
-                        <li routerLinkActive="active">
-                            <a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Register</a>
-                        </li>
-                        <li routerLinkActive="active">
-                            <a routerLink="/signin"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-                        </li>
+                        <li routerLinkActive="active"><a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                        <li routerLinkActive="active"><a routerLink="/signin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ng-template>
-                    <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
-                        <a (click)="onLogout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
-                    </li>
+                    <li *ngIf="authService.isAuthenticated()" routerLinkActive="active"><a (click)="onLogout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 </header>
-<!-- header role="banner" -->

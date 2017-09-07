@@ -19,10 +19,10 @@
         <li>
           <a (click)="onAddToShoppingList()"><span class="glyphicon glyphicon-shopping-cart"></span> To Shopping List</a>
         </li>
-        <li>
+        <li [ngClass]="{'disabled': !authService.isAuthenticated()}">
           <a (click)="onEditRecipe()"><span class="glyphicon glyphicon-pencil"></span> Edit Recipe</a>
         </li>
-        <li>
+        <li [ngClass]="{'disabled': !authService.isAuthenticated()}">
           <a (click)="onDeleteRecipe()"><span class="glyphicon glyphicon-trash"></span> Delete Recipe</a>
         </li>
       </ul>

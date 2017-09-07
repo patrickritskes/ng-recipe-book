@@ -1,6 +1,11 @@
+.recipe-book-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
 .copyright {
-    min-height: 40px;
-    background-color: #000000;
+    background-color: #222;
     font-family: 'Shadows Into Light', cursive;
 }
 

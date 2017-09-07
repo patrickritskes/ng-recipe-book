@@ -50,3 +50,11 @@ Remove all refs to remote branches (prefixe with origin) that don't exists anymo
 ```
 git fetch --prune
 ```
+
+Merge 'develop' branch into the 'master' branch
+```
+(on branch develop)git merge master
+(resolve any merge conflicts if there are any)
+git checkout master
+git merge development (there won't be any conflicts now)
+```

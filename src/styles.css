@@ -225,7 +225,7 @@ option {
 }
 
 .list-group-item {
-    padding: 12px 15px;
+    padding: 11.2px 15px;
 }
 
 label {
@@ -244,4 +244,10 @@ input.ng-invalid.ng-touched,
 select.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
     border: 1px solid red;
+}
+
+@media(max-width:767px) {
+    .recipe-book-bg {
+        margin-bottom: 100px;;
+    }
 }

@@ -1,6 +1,21 @@
 .list-group-item {
     font-size: 23px;
 }
+
+.list-group-item-text {
+    white-space: nowrap;
+    width: 10em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 31px;
+}
+
 .list-group-item.active {
     background-color: black;
+}
+
+@media(max-width:767px) {
+    .list-group-item-text {
+        width: 6em;
+    }
 }
